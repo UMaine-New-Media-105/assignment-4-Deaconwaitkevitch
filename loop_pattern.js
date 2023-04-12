@@ -30,7 +30,7 @@ function squaresX(X, Y, Scale) {
   }
   pop();
 }
-
+//This is the updated code
 function circX(X, Y, Scale) {
   push();
   fill("red");
@@ -39,5 +39,40 @@ function circX(X, Y, Scale) {
   for (let circDrawn = 0; circDrawn < 20; circDrawn++) {
     ellipse(circDrawn * 110, 10, 40);
   }
+  pop();
+}
+
+
+
+let Y = 10;
+
+function setup() {
+  createCanvas(400, 400);
+}
+//Used badge pattern tutorial & YouTube for formatting.
+function draw() {
+  background("black");
+  for (let row = -1; row < 11; row++) {
+    for (let column = 0; column < 20; column++) {
+      let x = column * 30;
+      let y = Y + row * 40;
+      drawSquare(x, y, 50);
+      drawCirc(x,y,25)
+    }
+  }
+}
+
+function drawSquare(x, y, size) {
+  push();
+  fill("slateblue");
+  translate(x, y);
+  rect(0, 0, size);
+  pop();
+}
+function drawCirc(x, y, size) {
+  push();
+  fill("springgreen");
+  translate(x, y);
+  ellipse(0, 0, size);
   pop();
 }
