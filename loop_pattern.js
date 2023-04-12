@@ -1,3 +1,6 @@
+//Updated code below
+
+
 let Y = 10;
 //for (let Y=10+=40 )
 function setup() {
@@ -30,20 +33,8 @@ function squaresX(X, Y, Scale) {
   }
   pop();
 }
-//This is the updated code
-function circX(X, Y, Scale) {
-  push();
-  fill("red");
-  translate(X, Y);
-  scale(Scale);
-  for (let circDrawn = 0; circDrawn < 20; circDrawn++) {
-    ellipse(circDrawn * 110, 10, 40);
-  }
-  pop();
-}
 
-
-
+//This is my updated code for this assignment 
 let Y = 10;
 
 function setup() {
@@ -57,7 +48,7 @@ function draw() {
       let x = column * 30;
       let y = Y + row * 40;
       drawSquare(x, y, 50);
-      drawCirc(x,y,25)
+      drawCirc(x, y, 25);
     }
   }
 }
